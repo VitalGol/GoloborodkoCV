@@ -39,15 +39,18 @@ const Address = () => {
         window.open('mailto:vital.goloborodko@gmail.com', 'mailto');
         break;
       case 3:
+        window.open('https://telegram.im/@VitalyGol', 'telegram');
+        break;
+      case 4:
         window.open(
           'http://linkedin.com/in/vitaly-goloborodko-57b7a761',
           'linkedin.com'
         );
         break;
-      case 4:
+      case 5:
         downloadFile();
         break;
-      case 5:
+      case 6:
         changeImgToQR();
         break;
 

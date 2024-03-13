@@ -9,6 +9,7 @@ import {
   FaGitAlt,
   FaFigma,
   FaGulp,
+  FaTelegram,
 } from 'react-icons/fa';
 import { SiWebpack } from 'react-icons/si';
 import { RiSupabaseLine } from 'react-icons/ri';
@@ -138,18 +139,24 @@ export const address = [
   },
   {
     id: 3,
+    icon: FaTelegram,
+    title: '@VitalyGol',
+    tooltip: 'write to me',
+  },
+  {
+    id: 4,
     icon: FaLinkedin,
     title: 'Linkedin',
     tooltip: 'click to open Linkedin in a new tab',
   },
+  // {
+  //   id: 5,
+  //   icon: FaFileDownload,
+  //   title: "download CV's file",
+  //   tooltip: 'download my CV',
+  // },
   {
-    id: 4,
-    icon: FaFileDownload,
-    title: "download CV's file",
-    tooltip: 'download my CV',
-  },
-  {
-    id: 5,
+    id: 6,
     icon: FaQrcode,
     title: 'show QR code',
     tooltip: 'click to scan QR code during 10sec',
