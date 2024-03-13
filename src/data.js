@@ -2,7 +2,7 @@ import {
   FaRegEnvelope,
   FaPhoneSquareAlt,
   FaLinkedin,
-  FaFileDownload,
+  // FaFileDownload,
   FaQrcode,
   FaReact,
   FaNodeJs,
