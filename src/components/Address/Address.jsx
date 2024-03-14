@@ -10,9 +10,7 @@ const Address = () => {
 
   const downloadFile = () => {
     // const pdfUrl = '../../assets/Goloborodko-FEdev.pdf';
-    // const pdfUrl = '/GoloborodkoCV/assets/Goloborodko-FEdev.pdf';
-    // const pdfUrl = './assets/Goloborodko-FEdev.pdf';
-    const pdfUrl = './assets/Goloborodko-FEdev.pdf';
+    const pdfUrl = '/GoloborodkoCV/assets/Goloborodko-FEdev.pdf';
     const link = document.createElement('a');
     link.href = pdfUrl;
     link.download = 'Goloborodko-FEdev.pdf'; // specify the filename
