@@ -2,7 +2,7 @@ import {
   FaRegEnvelope,
   FaPhoneSquareAlt,
   FaLinkedin,
-  // FaFileDownload,
+  FaFileDownload,
   FaQrcode,
   FaReact,
   FaNodeJs,
@@ -141,7 +141,7 @@ export const address = [
     id: 3,
     icon: FaTelegram,
     title: '@VitalyGol',
-    tooltip: 'write to me',
+    tooltip: 'telegram to me',
   },
   {
     id: 4,
@@ -149,12 +149,12 @@ export const address = [
     title: 'Linkedin',
     tooltip: 'click to open Linkedin in a new tab',
   },
-  // {
-  //   id: 5,
-  //   icon: FaFileDownload,
-  //   title: "download CV's file",
-  //   tooltip: 'download my CV',
-  // },
+  {
+    id: 5,
+    icon: FaFileDownload,
+    title: "download CV's file",
+    tooltip: 'download my CV',
+  },
   {
     id: 6,
     icon: FaQrcode,

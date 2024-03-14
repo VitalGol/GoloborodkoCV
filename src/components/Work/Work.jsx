@@ -29,7 +29,7 @@ const Work = () => {
         <p className="mb-2">
           Example of the last project —
           <span
-            className="font-bold cursor-pointer hover:underline hover:underline-offset-8"
+            className="font-medium cursor-pointer hover:underline hover:underline-offset-8"
             data-tooltip-id="work-tooltip"
             data-tooltip-content="Click to open link in a new tab "
             data-tooltip-delay-hide={500}
@@ -46,7 +46,7 @@ const Work = () => {
           An example of using the <b>React Router</b> library to navigate
           between different parts of a web application created in React —
           <span
-            className="font-bold cursor-pointer hover:underline hover:underline-offset-8"
+            className="font-medium cursor-pointer hover:underline hover:underline-offset-8"
             data-tooltip-id="work-tooltip"
             data-tooltip-content="Click to open link in a new tab "
             data-tooltip-delay-hide={500}

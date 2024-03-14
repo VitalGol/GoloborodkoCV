@@ -9,7 +9,8 @@ const Address = () => {
   const [timer, setTimer] = useState(10);
 
   const downloadFile = () => {
-    const pdfUrl = 'Goloborodko-FEdev.pdf';
+    // const pdfUrl = '../../assets/Goloborodko-FEdev.pdf';
+    const pdfUrl = '/GoloborodkoCV/assets/Goloborodko-FEdev.pdf';
     const link = document.createElement('a');
     link.href = pdfUrl;
     link.download = 'Goloborodko-FEdev.pdf'; // specify the filename
@@ -120,6 +121,15 @@ const Address = () => {
           })}
         </ul>
       </div>
+
+      {/* <a href="/GoloborodkoCV/assets/apr2020.jpg" download> */}
+      {/* <a href="./assets/apr2020.jpg" download> */}
+      {/* <a
+        href="/GoloborodkoCV/assets/Goloborodko-FEdev.pdf"
+        download="Goloborodko-FEdev.pdf"
+      >
+        DOWNLOAD
+      </a> */}
     </div>
   );
 };
