@@ -70,7 +70,6 @@ const Address = () => {
           zIndex: 10,
         }}
       />
-
       <div className="flex content-center justify-center lg:mb-20 mb-10 lg:mt-0 mt-10  ">
         <div className="address">
           {timer === 10 ? (
@@ -121,15 +120,6 @@ const Address = () => {
           })}
         </ul>
       </div>
-
-      {/* <a href="/GoloborodkoCV/assets/apr2020.jpg" download> */}
-      {/* <a href="./assets/apr2020.jpg" download> */}
-      {/* <a
-        href="/GoloborodkoCV/assets/Goloborodko-FEdev.pdf"
-        download="Goloborodko-FEdev.pdf"
-      >
-        DOWNLOAD
-      </a> */}
     </div>
   );
 };
