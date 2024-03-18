@@ -9,15 +9,33 @@ const Address = () => {
   const [timer, setTimer] = useState(10);
 
   const downloadFile = () => {
-    // const pdfUrl = '../../assets/Goloborodko-FEdev.pdf';
     const pdfUrl = '/GoloborodkoCV/assets/Goloborodko-FEdev.pdf';
-    const link = document.createElement('a');
-    link.href = pdfUrl;
-    link.download = 'Goloborodko-FEdev.pdf'; // specify the filename
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    // const pdfUrl = '../../assets/Goloborodko-FEdev.pdf';
+    fetch(pdfUrl)
+      .then((response) => response.blob())
+      .then((blob) => {
+        const blobURL = window.URL.createObjectURL(new Blob([blob]));
+        const fileName = 'Goloborodko-FEdev.pdf';
+        const link = document.createElement('a');
+        link.href = blobURL;
+        // link.download = 'Goloborodko-FEdev.pdf'; // specify the filename
+        link.setAttribute('download', fileName);
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        // document.body.removeChild(link);
+      });
   };
+  // const downloadFile = () => {
+  //   // const pdfUrl = '../../assets/Goloborodko-FEdev.pdf';
+  //   const pdfUrl = '/GoloborodkoCV/assets/Goloborodko-FEdev.pdf';
+  //   const link = document.createElement('a');
+  //   link.href = pdfUrl;
+  //   link.download = 'Goloborodko-FEdev.pdf'; // specify the filename
+  //   document.body.appendChild(link);
+  //   link.click();
+  //   document.body.removeChild(link);
+  // };
 
   const changeImgToQR = () => {
     const hover = document.querySelector('.hover');
