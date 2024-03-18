@@ -49,16 +49,17 @@ const Address = () => {
   //       // document.body.removeChild(link);
   //     });
   // };
-  // const downloadFile = () => {
-  //   // const pdfUrl = '../../assets/Goloborodko-FEdev.pdf';
-  //   const pdfUrl = '/GoloborodkoCV/assets/Goloborodko-FEdev.pdf';
-  //   const link = document.createElement('a');
-  //   link.href = pdfUrl;
-  //   link.download = 'Goloborodko-FEdev.pdf'; // specify the filename
-  //   document.body.appendChild(link);
-  //   link.click();
-  //   document.body.removeChild(link);
-  // };
+  const downloadFile = () => {
+    // const pdfUrl = '../../assets/Goloborodko-FEdev.pdf';
+    // const pdfUrl = '/GoloborodkoCV/assets/Goloborodko-FEdev.pdf';
+    const link = document.createElement('a');
+    // link.href = pdfUrl;
+    link.href = resume;
+    link.download = 'Goloborodko-FEdev.pdf'; // specify the filename
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   const changeImgToQR = () => {
     const hover = document.querySelector('.hover');
@@ -161,7 +162,7 @@ const Address = () => {
           })}
         </ul>
         <button>
-          <a href={resume} download="YourName resume.pdf">
+          <a href={resume} download="Goloborodko-FEdev.pdf">
             {' '}
             Download CV{' '}
           </a>
