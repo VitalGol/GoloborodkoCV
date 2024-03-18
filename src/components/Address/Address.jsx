@@ -4,28 +4,51 @@ import { address } from '../../data';
 import './Address.scss';
 import myPhoto from '../../assets/photo2021.jpg';
 import qrCode from '../../assets/qr-code.png';
+import resume from '../../assets/GoloborodkoFEdev.pdf';
 
 const Address = () => {
   const [timer, setTimer] = useState(10);
 
-  const downloadFile = () => {
-    const pdfUrl = '/GoloborodkoCV/assets/Goloborodko-FEdev.pdf';
-    // const pdfUrl = '../../assets/Goloborodko-FEdev.pdf';
-    fetch(pdfUrl)
-      .then((response) => response.blob())
-      .then((blob) => {
-        const blobURL = window.URL.createObjectURL(new Blob([blob]));
-        const fileName = 'Goloborodko-FEdev.pdf';
-        const link = document.createElement('a');
-        link.href = blobURL;
-        // link.download = 'Goloborodko-FEdev.pdf'; // specify the filename
-        link.setAttribute('download', fileName);
-        document.body.appendChild(link);
-        link.click();
-        link.remove();
-        // document.body.removeChild(link);
-      });
-  };
+  // const downloadFile = () => {
+  //   const pdfUrl = '/GoloborodkoCV/assets/GoloborodkoFEdev.pdf';
+  //   // const pdfUrl = '../../assets/GoloborodkoFEdev.pdf';
+  //   fetch(pdfUrl, {
+  //     headers: {
+  //       'Content-Type': 'application/json',
+  //     },
+  //   })
+  //     .then((response) => response.blob())
+  //     .then((blob) => {
+  //       const blobURL = window.URL.createObjectURL(new Blob([blob]));
+  //       // const fileName = 'GoloborodkoFEdev.pdf';
+  //       const link = document.createElement('a');
+  //       link.href = blobURL;
+  //       // link.download = 'GoloborodkoFEdev.pdf'; // specify the filename
+  //       link.setAttribute('download', resume);
+  //       document.body.appendChild(link);
+  //       link.click();
+  //       link.remove();
+  //       // document.body.removeChild(link);
+  //     });
+  // };
+  // const downloadFile = () => {
+  //   const pdfUrl = '/GoloborodkoCV/assets/GoloborodkoFEdev.pdf';
+  //   // const pdfUrl = '../../assets/GoloborodkoFEdev.pdf';
+  //   fetch(pdfUrl)
+  //     .then((response) => response.blob())
+  //     .then((blob) => {
+  //       const blobURL = window.URL.createObjectURL(new Blob([blob]));
+  //       const fileName = 'GoloborodkoFEdev.pdf';
+  //       const link = document.createElement('a');
+  //       link.href = blobURL;
+  //       // link.download = 'GoloborodkoFEdev.pdf'; // specify the filename
+  //       link.setAttribute('download', fileName);
+  //       document.body.appendChild(link);
+  //       link.click();
+  //       link.remove();
+  //       // document.body.removeChild(link);
+  //     });
+  // };
   // const downloadFile = () => {
   //   // const pdfUrl = '../../assets/Goloborodko-FEdev.pdf';
   //   const pdfUrl = '/GoloborodkoCV/assets/Goloborodko-FEdev.pdf';
@@ -137,6 +160,12 @@ const Address = () => {
             );
           })}
         </ul>
+        <button>
+          <a href={resume} download="YourName resume.pdf">
+            {' '}
+            Download CV{' '}
+          </a>
+        </button>
       </div>
     </div>
   );
