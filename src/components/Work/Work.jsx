@@ -16,9 +16,7 @@ const Work = () => {
         }}
       />
       {/* <h1 className="mt-4 text-3xl font-medium text-color-bg-photo"> */}
-
       <SkillsLine />
-
       <h1 className="mt-1 text-3xl font-bold tracking-wider xs:text-2xl ls:text-2xl font-jakarta xl:mt-4 text-color-bg-photo">
         Work experience
       </h1>
