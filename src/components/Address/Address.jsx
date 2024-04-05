@@ -62,7 +62,7 @@ const Address = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center w-full lg:w-2/6  xl:w-2/6 p-4 xs:p-2 ls:p-2 bg-gray-600 dark:bg-slate-200 text-gray-50 dark:text-color-text-light font-inter font-thin dark:font-normal ">
+    <div className="flex flex-col items-center justify-center w-full p-4 font-thin bg-gray-600 lg:w-2/6 xl:w-2/6 xs:p-2 ls:p-2 dark:bg-slate-200 text-gray-50 dark:text-color-text-light font-inter dark:font-normal ">
       <Tooltip
         id="my-tooltip"
         style={{
@@ -71,17 +71,21 @@ const Address = () => {
           zIndex: 10,
         }}
       />
-      <div className="flex content-center justify-center lg:mb-20 mb-10 lg:mt-0 mt-10  ">
+      <div className="flex content-center justify-center mt-10 mb-10 lg:mb-20 lg:mt-0 ">
         <div className="address">
           {timer === 10 ? (
-            <p className="text-center text-sm mb-2 opacity-0">{timer} sec</p>
+            <p className="mb-2 text-sm text-center opacity-0">{timer} sec</p>
           ) : (
-            <p className="text-center text-sm mb-2">{timer} sec</p>
+            <p className="mb-2 text-sm text-center">{timer} sec</p>
           )}
           <div
             className="address-flip"
             data-tooltip-id="my-tooltip"
-            data-tooltip-content="Click to show QR code for 10 sec"
+            data-tooltip-content={
+              timer === 10
+                ? `Click to show QR code for 10 sec`
+                : `Scan the QR code during ${timer} sec`
+            }
             data-tooltip-delay-hide={500}
           >
             <div className="hover address-card">

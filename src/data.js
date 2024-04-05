@@ -10,12 +10,20 @@ import {
   FaFigma,
   FaGulp,
   FaTelegram,
+  FaHtml5,
+  FaSass,
+  FaGithub,
 } from 'react-icons/fa';
 import { SiWebpack } from 'react-icons/si';
-import { RiSupabaseLine } from 'react-icons/ri';
-import { TbBrandNextjs, TbBrandVite } from 'react-icons/tb';
-import { BsFiletypeScss } from 'react-icons/bs';
-import { SiMongodb } from 'react-icons/si';
+import { RiSupabaseLine, RiJavascriptLine } from 'react-icons/ri';
+import {
+  TbBrandNextjs,
+  TbBrandVite,
+  TbBrandTypescript,
+  TbBrandMongodb,
+} from 'react-icons/tb';
+import { BsFiletypeScss, BsBootstrap } from 'react-icons/bs';
+import { SiMongodb, SiTailwindcss, SiRedux } from 'react-icons/si';
 import apr2020 from './assets/apr2020.jpg';
 import may2020 from './assets/may2020.jpg';
 import mar2021 from './assets/mar2021.jpg';
@@ -122,6 +130,27 @@ export const skills = [
     title: 'Experience with',
     text: ' Git.',
   },
+];
+
+export const skillsLine = [
+  { id: 1, icon: FaHtml5, name: 'HTML' },
+  { id: 2, icon: FaSass, name: 'SCSS' },
+  { id: 3, icon: RiJavascriptLine, name: 'JS' },
+  { id: 4, icon: TbBrandTypescript, name: 'TS' },
+  { id: 5, icon: FaNodeJs, name: 'NodeJS' },
+  { id: 6, icon: TbBrandVite, name: 'Vite' },
+  { id: 7, icon: FaReact, name: 'ReactJS' },
+  { id: 8, icon: TbBrandNextjs, name: 'NextJS' },
+  { id: 9, icon: SiTailwindcss, name: 'TailwindCSS' },
+  { id: 10, icon: BsBootstrap, name: 'Bootstrap' },
+  { id: 11, icon: SiRedux, name: 'Redux' },
+  { id: 12, icon: TbBrandMongodb, name: 'MongoDB' },
+  { id: 13, icon: RiSupabaseLine, name: 'Supabase' },
+  { id: 14, icon: FaFigma, name: 'Figma' },
+  { id: 15, icon: FaGulp, name: 'Gulp' },
+  { id: 16, icon: SiWebpack, name: 'Webpack' },
+  { id: 17, icon: FaGithub, name: 'Github' },
+  { id: 18, icon: FaGitAlt, name: 'Git' },
 ];
 
 export const address = [

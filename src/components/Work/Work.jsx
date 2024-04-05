@@ -1,10 +1,12 @@
+import { FiExternalLink } from 'react-icons/fi';
 import { Tooltip } from 'react-tooltip';
+import SkillsLine from '../SkillsLine/SkillsLine';
 const Work = () => {
   const linkToUrl = (url, target) => {
     window.open(url, target);
   };
   return (
-    <div className="flex flex-col w-full p-4 xs:p-2 ls:p-2 lg:w-4/6 xl:w-4/6 bg-gray-500 dark:bg-slate-100 text-gray-50 dark:text-color-text-light font-inter font-thin dark:font-normal ">
+    <div className="flex flex-col w-full p-4 font-thin bg-gray-500 xs:p-2 ls:p-2 lg:w-4/6 xl:w-4/6 dark:bg-slate-100 text-gray-50 dark:text-color-text-light font-inter dark:font-normal ">
       <Tooltip
         id="work-tooltip"
         style={{
@@ -14,7 +16,10 @@ const Work = () => {
         }}
       />
       {/* <h1 className="mt-4 text-3xl font-medium text-color-bg-photo"> */}
-      <h1 className="mt-1 text-3xl xs:text-2xl ls:text-2xl font-bold tracking-wider font-jakarta xl:mt-4 text-color-bg-photo">
+
+      <SkillsLine />
+
+      <h1 className="mt-1 text-3xl font-bold tracking-wider xs:text-2xl ls:text-2xl font-jakarta xl:mt-4 text-color-bg-photo">
         Work experience
       </h1>
       <div className="py-6 xl:px-4 lg:px-4 md:px-2 sm:px-2 xs:px-2 ls:px-2">
@@ -46,7 +51,7 @@ const Work = () => {
           An example of using the <b>React Router</b> library to navigate
           between different parts of a web application created in React —
           <span
-            className="font-medium cursor-pointer hover:underline hover:underline-offset-8"
+            className="text-2xl font-medium cursor-pointer"
             data-tooltip-id="work-tooltip"
             data-tooltip-content="Click to open link in a new tab "
             data-tooltip-delay-hide={500}
@@ -57,8 +62,7 @@ const Work = () => {
               )
             }
           >
-            {' '}
-            www.react-router-coral.vercel.app
+            <FiExternalLink className="inline mb-1 ml-2 text-color-bg-photo" />
           </span>
         </p>
 
@@ -70,6 +74,25 @@ const Work = () => {
 
         <p className="mb-2">
           In some projects I used a database management system — <b>MongoDB</b>.
+        </p>
+        <p className="mb-2">
+          An example of using the <b> Next JS 14</b> framework to server-side
+          render a web application for a cartoon character database and to-do
+          list operations running <b>MongoDB</b> —
+          <span
+            className="text-2xl font-medium cursor-pointer"
+            data-tooltip-id="work-tooltip"
+            data-tooltip-content="Click to open link in a new tab "
+            data-tooltip-delay-hide={500}
+            onClick={() =>
+              linkToUrl(
+                'https://todo-app-sage-three-71.vercel.app',
+                'todo-app-sage-three-71.vercel.app'
+              )
+            }
+          >
+            <FiExternalLink className="inline mb-1 ml-2 text-color-bg-photo" />
+          </span>
         </p>
         <p className="mb-2">
           I use some <b>CSS frameworks</b> to speed up the coding of React apps.
