@@ -4,7 +4,7 @@ import Marquee from 'react-fast-marquee';
 const SkillsLine = () => {
   const themeSkillsLine = localStorage.getItem('theme');
   return (
-    <div className="flex max-w-[1450px] xl:max-w-[910px] lg:max-w-[650px] md:max-w-[750px] sm:max-w-[600px] xs:max-w-[450px] ls:max-w-[280px] w-full m-auto text-base">
+    <div className="flex max-w-[1450px] xl:max-w-[910px] lg:max-w-[650px] md:max-w-[750px] sm:max-w-[600px] xs:max-w-[450px] ls:max-w-[300px] w-full m-auto text-base">
       {themeSkillsLine === 'light' ? (
         <Marquee
           speed="30"
