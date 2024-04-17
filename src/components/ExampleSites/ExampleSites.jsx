@@ -6,7 +6,7 @@ const ExampleSites = () => {
     window.open(url, target);
   };
   return (
-    <div className="flex lg:flex-col md:flex-col sm:flex-col xs:flex-col ls:flex-col sm:w-[60%] xs:w-[80%] ls:w-[90%]  sm:m-auto xs:m-auto ls:m-auto gap-2 text-lg">
+    <div className="flex lg:flex-col md:flex-col sm:flex-col xs:flex-col ls:flex-col  md:w-[80%]  md:m-auto sm:w-[60%] xs:w-[80%] ls:w-[90%]  sm:m-auto xs:m-auto ls:m-auto gap-2 text-lg">
       <Tooltip
         id="work-tooltip"
         style={{
