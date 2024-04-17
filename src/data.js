@@ -28,6 +28,9 @@ import apr2020 from './assets/apr2020.jpg';
 import may2020 from './assets/may2020.jpg';
 import mar2021 from './assets/mar2021.jpg';
 import aug2022 from './assets/aug2022.jpg';
+import vgroup from './assets/3vgroup.jpg';
+import reactRouter from './assets/react-router.jpg';
+import todo from './assets/todo.jpg';
 
 // const lableSupabase = { icon: RiSupabaseLine };
 
@@ -217,5 +220,41 @@ export const courses = [
     title: 'August, 2022. Udemy.',
     content:
       'Course "Become A Full Stack Web Developer - Beginner To Advanced"',
+  },
+];
+
+export const exampleSites = [
+  {
+    id: 1,
+    img: vgroup,
+    text: [
+      'Using the ',
+      ' library to navigate between different parts of a web application created in ',
+    ],
+    span: ['React Router', 'React JS'],
+    url: 'http://3vgroup.com.ua/',
+    target: '3vgroup.com.ua',
+  },
+  {
+    id: 2,
+    img: reactRouter,
+    text: [
+      'Using the ',
+      ' library to navigate the web application and display data from an API built in ',
+    ],
+    span: ['React Router v6.22', 'React JS'],
+    url: 'https://react-router-coral.vercel.app/',
+    target: 'react-router-coral.vercel.app',
+  },
+  {
+    id: 3,
+    img: todo,
+    text: [
+      'Using the ',
+      ' framework to server-side render a web application for a cartoon character database and to-do list operations running',
+    ],
+    span: ['Next JS 14', 'MongoDB'],
+    url: 'https://todo-app-sage-three-71.vercel.app',
+    target: 'todo-app-sage-three-71.vercel.app',
   },
 ];
