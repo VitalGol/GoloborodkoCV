@@ -13,6 +13,10 @@ export default {
         'color-text-light': '#121212',
       },
     },
+    letterSpacing: {
+      super: '0.8rem',
+      normal: '0.2rem',
+    },
     screens: {
       ls: { min: '300px', max: '474px' },
       xs: { min: '475px', max: '639px' },
