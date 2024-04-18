@@ -23,7 +23,7 @@ function App() {
   }, []);
 
   return (
-    <div className="flex flex-wrap justify-between items-stretch text-xl box-border xl:mx-4">
+    <div className="flex flex-wrap justify-between items-stretch text-xl box-border">
       <div className="flex flex-col justify-center w-full mx-0 m-auto">
         <Name darkMode={darkMode} setDarkMode={setDarkMode} />
         <div className="flex flex-wrap">

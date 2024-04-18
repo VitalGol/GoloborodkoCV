@@ -35,8 +35,12 @@ const Work = () => {
           In some projects I used a database management system — <b>MongoDB</b>.
         </p>
         <p className="mb-2">
-          I use some <b>CSS frameworks</b> to speed up the coding of React apps.
+          I use some <b>CSS frameworks</b> to create attractive and responsive
+          user interfaces and to speed up application coding.{' '}
         </p>
+        {/* <p className="mb-2">
+          I use some <b>CSS frameworks</b> to speed up the coding of React apps.
+        </p> */}
 
         <p className="mb-2">
           I write codes for cross-browser and responsive websites of any

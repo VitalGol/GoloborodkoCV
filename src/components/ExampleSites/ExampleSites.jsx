@@ -6,7 +6,7 @@ const ExampleSites = () => {
     window.open(url, target);
   };
   return (
-    <div className="flex lg:flex-col md:flex-col sm:flex-col xs:flex-col ls:flex-col  md:w-[80%]  md:m-auto sm:w-[60%] xs:w-[80%] ls:w-[90%]  sm:m-auto xs:m-auto ls:m-auto gap-2 text-lg">
+    <div className="flex lg:flex-col md:flex-col sm:flex-col xs:flex-col ls:flex-col  lg:w-[95%]  lg:m-auto  md:w-[80%]  md:m-auto sm:w-[60%] xs:w-[80%] ls:w-[90%]  sm:m-auto xs:m-auto ls:m-auto gap-2 text-lg">
       <Tooltip
         id="work-tooltip"
         style={{
@@ -27,7 +27,7 @@ const ExampleSites = () => {
           <img
             src={site.img}
             alt={site.target}
-            className=" w-[300px] lg:w-[200px] lg:h-auto h-[175px] md:w-[200px] md:h-auto mt-2 mb-4 lg:mt-0 lg:mb-0 md:mt-0 md:mb-0 "
+            className=" w-[300px] h-[175px] lg:w-[195px] lg:h-auto md:w-[200px] md:h-auto mt-2 mb-4 lg:mt-0 lg:mb-0 md:mt-0 md:mb-0 "
           />
 
           <p className="lg:ml-4 md:ml-4">
