@@ -1,4 +1,6 @@
 "use client";
+import { motion } from "motion/react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import profilePic from "../../public/photo2021.jpg";
 import qrCodePic from "../../public/qr-code.png";
@@ -14,10 +16,8 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-
 import TopFooter from "./top-footer";
 import { Button } from "./ui/button";
-
 import {
   Dialog,
   DialogClose,
@@ -28,8 +28,25 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 
+const cardVariants = {
+  front: { rotateY: 0 },
+  back: { rotateY: 180 },
+};
+
 export default function Top() {
   const { theme, setTheme } = useTheme();
+  const [isFlipped, setIsFlipped] = useState(false);
+
+  useEffect(() => {
+    if (isFlipped) {
+      const changePhoto = setInterval(() => {
+        setIsFlipped(!isFlipped);
+      }, 5000);
+      return () => {
+        clearInterval(changePhoto);
+      };
+    }
+  }, [isFlipped]);
 
   const downloadCV = () => {
     console.log("downloadCV");
@@ -149,15 +166,42 @@ export default function Top() {
               web developer
             </p>
           </div>
-          <Image
+          <div className="flex justify-center items-center ml-4 mt-8 md:mt-0   ">
+            <motion.div
+              className="  perspective-1000"
+              whileHover={{ scale: 1.05, rotate: 1 }}
+              onClick={() => setIsFlipped(!isFlipped)}
+              transition={{ duration: 0.8 }}
+            >
+              <motion.div
+                variants={cardVariants}
+                initial="front"
+                animate={isFlipped ? "back" : "front"}
+                className="flex justify-center items-center w-30 h-30     transform-style-preserve-3d"
+              >
+                <motion.div className=" inset-0 ">
+                  <Image
+                    src={isFlipped ? qrCodePic : profilePic}
+                    alt="photo Goloborodko Vitaly web developer"
+                    placeholder="blur"
+                    className={`  md:mt-0 ${
+                      isFlipped ? "rounded-none" : "rounded-2xl"
+                    }   w-[70px] h-[70wh] sm:w-[90px] sm:h-[90wh] md:w-[90px] md:h-[90wh] lg:w-[100px]    `}
+                    // className="ml-4 mt-8 md:mt-0 rounded-2xl w-[70px] h-[70wh] sm:w-[90px] sm:h-[90wh] md:w-[90px] md:h-[90wh] lg:w-[100px]    "
+                  />
+                </motion.div>
+              </motion.div>
+            </motion.div>
+          </div>
+          {/* <Image
             src={profilePic}
             alt="photo Goloborodko Vitaly web developer"
             placeholder="blur"
             className="ml-4 mt-8  md:mt-0 rounded-2xl w-[70px] h-[70wh] sm:w-[90px] sm:h-[90wh] md:w-[90px] md:h-[90wh] lg:w-[100px]    "
             // className="ml-4 mt-8 md:mt-0 rounded-2xl w-[70px] h-[70wh] sm:w-[90px] sm:h-[90wh] md:w-[90px] md:h-[90wh] lg:w-[100px]    "
-          />
+          /> */}
         </div>
-        <div className="flex flex-row lg:flex-col justify-center items-center gap-12 lg:gap-1 mt-[-1.25rem] sm:mt-[-1.75rem] md:mt-[-1.5rem] lg:mt-0 ml-[-1rem] lg:ml-4 xl:ml-6 mr-20 ">
+        <div className="flex flex-row lg:flex-col justify-center items-center gap-6 sm:gap-12 lg:gap-1 mt-[-3.25rem] sm:mt-[-3rem] md:mt-[-2rem] lg:mt-0 ml-[-1rem] lg:ml-2 xl:ml-4 mr-30 ">
           {/* <div className="flex flex-row lg:flex-col justify-center items-center gap-12 lg:gap-1 mt-[-1.25rem] sm:mt-[-1.75rem] md:mt-[-.5rem] lg:mt-0 mr-20 lg:ml-4 xl:ml-6 "> */}
           <Button
             variant="outline"
